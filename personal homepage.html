@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        /* Headings */
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        h3 {
+            color: #16a085;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+
+        strong {
+            color: #e67e22;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        ul, ol {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .mood-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .mood {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .mood img {
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .mood img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .container {
+            background-color: #2d2d2d;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        body.dark-mode h1 {
+            color: #64b5f6;
+            border-bottom-color: #42a5f5;
+        }
+
+        body.dark-mode h2 {
+            color: #ef5350;
+        }
+
+        body.dark-mode h3 {
+            color: #4db6ac;
+        }
+
+        body.dark-mode strong {
+            color: #ffb74d;
+        }
+
+        body.dark-mode a {
+            color: #64b5f6;
+        }
+
+        body.dark-mode a:hover {
+            color: #42a5f5;
+        }
+
+        body.dark-mode .section {
+            background-color: #383838;
+            border-left-color: #42a5f5;
+        }
+
+        body.dark-mode footer {
+            border-top-color: #444;
+            color: #9e9e9e;
+        }
+
+        body.dark-mode .theme-toggle {
+            background-color: #ffa726;
+        }
+
+        body.dark-mode .theme-toggle:hover {
+            background-color: #fb8c00;
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    
+    <div class="container">
+        <h1>About Me: Saidjovkhar</h1>
+        
+        <div class="section">
+            <h2>Who Am I?</h2>
+            <p>
+                I am a <strong>dedicated student</strong> at Inha University in Tashkent, 
+                passionate about <strong>technology and innovation</strong>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>My Current Classes</h2>
+            <ul>
+                <li>Introduction to Information Technology</li>
+                <li>Programming Fundamentals</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Database Management Systems</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>My Top 3 Favorites</h2>
+            <ol>
+                <li>
+                    <strong>The Shawshank Redemption</strong> - 
+                    <a href="https://www.imdb.com/title/tt0111161/" target="_blank">View on IMDB</a>
+                </li>
+                <li>
+                    <strong>Breaking Bad</strong> - 
+                    <a href="https://www.imdb.com/title/tt0903747/" target="_blank">View on IMDB</a>
+                </li>
+                <li>
+                    <strong>The Dark Knight</strong> - 
+                    <a href="https://www.imdb.com/title/tt0468569/" target="_blank">View on IMDB</a>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>My Moods</h2>
+            <div class="mood-container">
+                <div class="mood">
+                    <h3>When I'm Happy 😊</h3>
+                    <img src="happy.jpg" alt="Happy mood">
+                </div>
+                <div class="mood">
+                    <h3>When I'm Sad 😔</h3>
+                    <img src="sad.jpg" alt="Sad mood">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>About My Neighbor</h2>
+            <p>
+                My neighbor Damir is an interesting person who loves playing chess 
+                and has won several local tournaments. They are also great at explaining 
+                complex programming concepts!
+            </p>
+        </div>
+
+        <footer>
+            <p>GitHub Page: <a href="https://github.com/Saidjovxar" target="_blank">MyGithub.github.io</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Get elements
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Add click event listener
+        themeToggle.addEventListener('click', function() {
+            // Toggle dark mode class
+            body.classList.toggle('dark-mode');
+            
+            // Change button text based on current mode
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = '☀️ Light Mode';
+            } else {
+                themeToggle.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
